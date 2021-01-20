@@ -17,7 +17,7 @@ addbtn.addEventListener('click', function () {
     if(txtareaval==''){
         alert('Please Enter Something..!')
     }else{
-    console.log(txtareaval);
+    
     localnotes.push(txtareaval);
     localStorage.setItem('Notes', JSON.stringify(localnotes));
     showNotes();
@@ -27,14 +27,14 @@ addbtn.addEventListener('click', function () {
 
 function showNotes() {
     var html = '';
-        console.log(localnotes.length);
+        
     if (localnotes.length === 0) {
-        html = `<b>There is No Notes to Show ...Add A New Note</b>`;
+        html = `<b>There are No Notes to Show ...Add A New Note</b>`;
         let noteCards = document.querySelector('.noteCards');
         noteCards.innerHTML = html;
     }
     else {
-        console.log(localnotes);
+       
         localnotes.forEach(function (element, index) {
             html += `<div class="noteCard my-2 mx-2 card" style="width: 18rem";>
                                 <div class="card-body">
